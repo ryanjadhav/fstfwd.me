@@ -25,7 +25,7 @@ var parseSearchForUrl = function(json) {
   if (json && json.tracks && json.tracks.length) {
     var href = json.tracks[0].href,
         parts = href.split(':');
-    var playUrl = BASE_WEB_URL + '/track/' + parts[parts.length-1];
+    var playUrl = BASE_WEB_URL + '/track/' + parts[parts.length - 1];
     return playUrl;
   } else {
     return false;
