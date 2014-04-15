@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "browserify lib/main.js -o public/javascripts/bundle.js"
   },
   "dependencies": {
     "express": "~4.0.0",
@@ -15,6 +16,8 @@
     "jade": "~1.3.0",
     "less-middleware": "0.1.15",
     "request": "2.34.0",
-    "node-rdio": "~0.1.1"
+    "node-rdio": "~0.1.1",
+    "browserify": "~3.41.0",
+    "jquery": "~2.1.0"
   }
 }

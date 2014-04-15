@@ -1,6 +1,6 @@
 var express = require('express');
-var spotify = require('./spotify');
-var rdio = require('./rdio');
+var spotify = require('../lib/spotify');
+var rdio = require('../lib/rdio');
 var router = express.Router();
 
 /* GET home page. */
