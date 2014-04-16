@@ -82,3 +82,10 @@ input {
 .search-group button {
   width: 100%;
 }
+.result {
+  text-align: center;
+  margin-top: 15px;
+}
+.result .result-link {
+  font-size: 24px;
+}
