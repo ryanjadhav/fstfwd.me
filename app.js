@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// Load ENV Variables
+var dotenv = require('dotenv').load();
+
+// Load Routes
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var translate = require('./routes/translate');
