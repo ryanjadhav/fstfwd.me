@@ -5,10 +5,10 @@ var router = express.Router();
 
 router.post('/', function(req, res, next) {
   var url = req.param('url');
-
+  var shortCode;
 
   if (url && !!url.match('rd.io')) {
-    var shortCode = url.split('/')[4];
+    shortCode = url.split('/')[4];
     rdio.getTrackName(shortCode, function(err, name) {
       if (err) {
         return next();
@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
       });
     });
   } else if (url && !!url.match('spotify')) {
-    var shortCode = url.split('/')[4];
+    shortCode = url.split('/')[4];
     spotify.getTrackName(shortCode, function(err, name){
       if (err) {
         return next();
