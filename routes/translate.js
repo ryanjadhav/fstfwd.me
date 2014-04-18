@@ -4,6 +4,7 @@ var rdio = require('../lib/rdio');
 var router = express.Router();
 
 router.post('/', function(req, res, next) {
+  console.log('hi hi hi');
   var url = req.param('url');
   var shortCode;
 
