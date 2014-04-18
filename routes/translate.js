@@ -11,11 +11,14 @@ router.post('/', function(req, res, next) {
 
   if (url && !!url.match('rd.io')) {
     shortCode = url.split('/')[4];
+    console.log(shortCode);
     rdio.getTrackName(shortCode, function(err, name) {
       if (err) {
         console.log(err);
+        console.log(name);
         return next();
       }
+      console.log(name);
       spotify.getTrackUrl(name, function(err, url) {
         if (err) {
           console.log(err);
