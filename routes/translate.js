@@ -34,6 +34,7 @@ router.post('/', function(req, res, next) {
         console.log(err);
         return next();
       }
+      console.log(name);
       rdio.getTrackUrl(name, function(err, url) {
         if (err) {
           console.log(err);
